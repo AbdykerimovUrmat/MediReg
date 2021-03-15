@@ -1,0 +1,9 @@
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Users\abdyk\source\repos\MediReg\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+C:\Users\abdyk\source\repos\MediReg\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Users\abdyk\source\repos\MediReg\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Users\abdyk\source\repos\MediReg\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
