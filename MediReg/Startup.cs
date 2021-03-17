@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MediReg.Extensions;
+using API.Extensions;
 
-namespace MediReg
+namespace API
 {
     public class Startup
     {

@@ -11,7 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Models;
 
-namespace MediReg.Extensions
+namespace API.Extensions
 {
     public static class IServiceCollectionExtension
     {

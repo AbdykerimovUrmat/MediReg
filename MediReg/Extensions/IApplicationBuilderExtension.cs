@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace MediReg.Extensions
+namespace API.Extensions
 {
     public static class IApplicationBuilderExtension
     {
