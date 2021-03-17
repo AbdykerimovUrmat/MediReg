@@ -5798,9 +5798,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\MediReg.csproj",
-      "projectName": "MediReg",
-      "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\MediReg.csproj",
+      "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\API.csproj",
+      "projectName": "API",
+      "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\API.csproj",
       "packagesPath": "C:\\Users\\abdyk\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\obj\\",
       "projectStyle": "PackageReference",

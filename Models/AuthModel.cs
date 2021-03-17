@@ -1,4 +1,6 @@
-﻿namespace Models
+﻿using System;
+
+namespace Models
 {
     public static class AuthModel
     {
@@ -28,14 +30,40 @@
             public string Password { get; set; }
         }
 
-        public class Response
+        public class Refresh
+        {
+            /// <summary>
+            /// Рефреш токен
+            /// </summary>
+            public string RefreshToken { get; set; }
+        }
+
+        public class Response : Refresh
         {
             /// <summary>
             /// Токен доступа
             /// </summary>
             public string AccessToken { get; set; }
 
+            /// <summary>
+            /// Срок истечения токена доступа
+            /// </summary>
+            public DateTime AccessTokenExpireDate { get; set; }
 
+            /// <summary>
+            /// Срок истечения рефреш токена
+            /// </summary>
+            public DateTime RefreshTokenExpireDate { get; set; }
+
+            /// <summary>
+            /// Имя пользователя
+            /// </summary>
+            public string UserName { get; set; }
+
+            /// <summary>
+            /// Роли пользователя
+            /// </summary>
+            public string Roles { get; set; }
         }
     }
 }

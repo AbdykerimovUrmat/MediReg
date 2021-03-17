@@ -3,7 +3,7 @@ using Common.Enums;
 using Common.Extensions;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MediReg.Infrastructure
+namespace API.Infrastructure
 {
     public class AuthorizeRolesAttribute : AuthorizeAttribute
     {

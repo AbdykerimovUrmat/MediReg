@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Models;
 
-namespace MediReg.Services
+namespace API.Services
 {
     public class AuthService
     {
@@ -30,7 +33,15 @@ namespace MediReg.Services
 
         private AuthModel.Response BuildResponse(User user, IEnumerable<Claim> claims, IEnumerable<string> roleNames)
         {
-            throw new NotImplementedException();
+            var (accessToken, expireDate) = GetAccessToken(claims);
+
+            return new AuthModel.Response
+            {
+                AccessToken = accessToken,
+                AccessTokenExpireDate = expireDate,
+                Roles = string.Join(',', roleNames),
+                UserName = user.UserName
+            };
         }
 
         private async Task<(User, IEnumerable<Claim>, IEnumerable<string>)> GetUserClaimsRoleNames(string userName, string password)
@@ -56,6 +67,20 @@ namespace MediReg.Services
             claims.AddRange(roles.Select(x => new Claim(ClaimTypes.Role, x)));
 
             return (claims, roles);
+        }
+
+        private (string, DateTime) GetAccessToken(IEnumerable<Claim> claims)
+        {
+            var utcNow = DateTime.UtcNow;
+            var expire = utcNow.Add(TimeSpan.FromMinutes(Jwt.AccessTokenLifeTimeInMinutes));
+            var jwt = new JwtSecurityToken(
+                Jwt.Issuer,
+                Jwt.Audience,
+                claims,
+                utcNow,
+                expire,
+                new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Jwt.Key)), SecurityAlgorithms.HmacSha256Signature));
+            return (new JwtSecurityTokenHandler().WriteToken(jwt), expire);
         }
     }
 }

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Common.Enums;
-using MediReg.Infrastructure;
+using API.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MediReg.Controllers
+namespace API.Controllers
 {
     [Route("api/Test")]
     public class TestController : BaseController

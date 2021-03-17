@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MediReg.Controllers
+namespace API.Controllers
 {
     public abstract class BaseController : ControllerBase { }
 }

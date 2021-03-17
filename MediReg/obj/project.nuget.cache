@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "clFdGf65BVJFxTsQsIRS4oRpGjj+6zwCGrmD34L0Dy28OF9EPetqF87TTKLzIVVXvIH2DqbnDIhvk5xKBAus5w==",
+  "dgSpecHash": "TgZsbqIrN2m4qSOvtND7XFDbj/1Cq1oscO7jNNgd+NbQoXrA4el6fH9aDaMnQZmune2EUZ9HKjlMikIw//xVCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\MediReg.csproj",
+  "projectFilePath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdyk\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\abdyk\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
