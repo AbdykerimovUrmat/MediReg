@@ -5793,27 +5793,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdyk\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\API.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\MediReg\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\API.csproj",
-      "packagesPath": "C:\\Users\\abdyk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\MediReg\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\MediReg\\API.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\MediReg\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\abdyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -5821,11 +5819,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj"
+            "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\abdyk\\source\\repos\\MediReg\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\Models\\Models.csproj"
+            "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Models\\Models.csproj"
             }
           }
         }
@@ -5887,7 +5885,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

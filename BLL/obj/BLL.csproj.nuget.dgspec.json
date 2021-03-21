@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdyk\\source\\repos\\MediReg\\BLL\\BLL.csproj": {}
+    "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdyk\\source\\repos\\MediReg\\BLL\\BLL.csproj": {
+    "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\abdyk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -30,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj"
+              "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj"
               }
             }
           }
@@ -66,29 +64,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\Common.csproj": {
+    "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\abdyk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -128,29 +124,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj": {
+    "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\abdyk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\abdyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -158,8 +152,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\abdyk\\source\\repos\\MediReg\\Common\\Common.csproj"
+              "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\SmartGit\\MediReg\\Common\\Common.csproj"
               }
             }
           }
@@ -204,7 +198,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
