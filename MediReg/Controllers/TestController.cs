@@ -3,23 +3,29 @@ using Common.Enums;
 using API.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using DAL.Entities;
 
 namespace API.Controllers
 {
     [Route("api/Test")]
     public class TestController : BaseController
     {
-        /// <summary>
-        /// Тестовый Get метод
-        /// </summary>
-        
-        [HttpGet]
-        [Route("List")]
-        [ProducesResponseType(typeof(IEnumerable<int>), StatusCodes.Status200OK)]
+        private UserManager<User> UserManager { get; }
 
-        public IEnumerable<int> TestGet()
+        public TestController(UserManager<User> userManager)
         {
-            return new List<int> { 1, 2, 3 };
+            UserManager = userManager;
+        }
+
+        /// <summary>
+        /// Добавить Админа
+        /// </summary>
+        [HttpPost]
+        [Route("AddAdmin")]
+        public void AddAdmin()
+        {
+
         }
     }
 }

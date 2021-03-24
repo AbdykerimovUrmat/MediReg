@@ -22,6 +22,7 @@ namespace API
             services.AddControllers();
             services.AddHttpContextAccessor();
 
+            services.RegisterAuth();
             services.RegisterIOptions(Configuration);
             services.RegisterServices();
             services.RegisterJwtAuthorization(Configuration);

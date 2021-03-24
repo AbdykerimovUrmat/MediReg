@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using API.Services;
 using DAL.EF;
 using DAL.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -18,6 +19,7 @@ namespace API.Extensions
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddScoped<IAppDbContext, AppDbContext>();
+            services.AddScoped<AuthService>();
         }
 
         public static void RegisterJwtAuthorization(this IServiceCollection services, IConfiguration configuration)
