@@ -16,9 +16,9 @@ namespace API.Seeders
             {
                 var context = scope.ServiceProvider.GetRequiredService<IAppDbContext>();
                 AddRoles(scope.ServiceProvider);
-                context.SaveChangesAsync();
+                context.SaveChangesAsync().GetAwaiter().GetResult();
                 AddUsers(scope.ServiceProvider);
-                context.SaveChangesAsync();
+                context.SaveChangesAsync().GetAwaiter().GetResult();
             }
             return webHost;
         }
@@ -36,7 +36,7 @@ namespace API.Seeders
                 if(userManager.FindByNameAsync(user.UserName).GetAwaiter().GetResult() == null)
                 {
                     userManager.CreateAsync(user, "bekitai").GetAwaiter().GetResult();
-                    userManager.AddToRoleAsync(user, RoleType.Admin.ToString());
+                    userManager.AddToRoleAsync(user, RoleType.Admin.ToString()).GetAwaiter().GetResult();
                 }
             }
         }
@@ -50,7 +50,8 @@ namespace API.Seeders
                     var normalizedRole = role.ToString().Normalize();
                     if (!roleManager.RoleExistsAsync(normalizedRole).GetAwaiter().GetResult())
                     {
-                        roleManager.CreateAsync(new Role { Name = normalizedRole });
+                        var entity = new Role { Name = normalizedRole };
+                        roleManager.CreateAsync(entity).GetAwaiter().GetResult();
                     }
                 }
             }

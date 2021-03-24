@@ -9,6 +9,7 @@ using DAL.Entities;
 namespace API.Controllers
 {
     [Route("api/Test")]
+    [AuthorizeRoles(RoleType.Admin)]
     public class TestController : BaseController
     {
         private UserManager<User> UserManager { get; }
@@ -23,9 +24,10 @@ namespace API.Controllers
         /// </summary>
         [HttpPost]
         [Route("AddAdmin")]
-        public void AddAdmin()
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        public int AddAdmin()
         {
-
+            return 25;
         }
     }
 }
