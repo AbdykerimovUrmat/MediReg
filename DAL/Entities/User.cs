@@ -1,6 +1,8 @@
-﻿using Common.Interfaces;
-using Microsoft.AspNetCore.Identity;
+﻿using System;
 using System.Collections.Generic;
+using Common.Enums;
+using Common.Interfaces;
+using Microsoft.AspNetCore.Identity;
 
 namespace DAL.Entities
 {
@@ -9,6 +11,10 @@ namespace DAL.Entities
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public DateTime BirthDate { get; set; }
+
+        public GenderType Gender { get; set; }
 
         public virtual ICollection<UserRole> Roles { get; set; }
     }
