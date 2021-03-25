@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using DAL.Entities;
+using System;
 
 namespace API.Controllers
 {
@@ -27,7 +28,7 @@ namespace API.Controllers
         [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
         public int AddAdmin()
         {
-            return 25;
+            return (int) Math.Sqrt(25);
         }
     }
 }
