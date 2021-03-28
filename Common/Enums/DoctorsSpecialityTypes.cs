@@ -2,7 +2,7 @@
 
 namespace Common.Enums
 {
-    public enum DoctorsSprecialtyType
+    public enum DoctorsSpecialtyType
     {
         /// <summary>
         /// Педиатр

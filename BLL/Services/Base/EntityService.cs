@@ -25,6 +25,7 @@ namespace BLL.Services.Base
             await Check(entity);
             await BeforeAdd(entity);
             await Entities.AddAsync(entity);
+            await SaveChanges();
 
             return entity;
         }
