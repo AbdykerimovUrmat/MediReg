@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210325175929_DoctorAdded")]
-    partial class DoctorAdded
+    [Migration("20210328180406_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -61,6 +61,10 @@ namespace DAL.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -123,6 +127,8 @@ namespace DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
                 });
 
             modelBuilder.Entity("DAL.Entities.UserRole", b =>
@@ -237,6 +243,16 @@ namespace DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("DAL.Entities.Doctor", b =>
+                {
+                    b.HasBaseType("DAL.Entities.User");
+
+                    b.Property<int>("Speciality")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Doctor");
                 });
 
             modelBuilder.Entity("DAL.Entities.UserRole", b =>
