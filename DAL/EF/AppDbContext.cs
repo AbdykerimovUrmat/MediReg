@@ -9,5 +9,7 @@ namespace DAL.EF
         UserRole, IdentityUserLogin<string>, IdentityRoleClaim<string>, IdentityUserToken<string>>, IAppDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public virtual DbSet<Doctor> Doctors { get; set; }
     }
 }

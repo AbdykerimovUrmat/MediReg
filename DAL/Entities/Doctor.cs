@@ -3,9 +3,11 @@ using Common.Enums;
 
 namespace DAL.Entities
 {
-    [Table("Doctors")]
     public class Doctor : User
     {
-        public DoctorsSprecialtyType Speciality { get; set; }
+        /// <summary>
+        /// Специальность 
+        /// </summary>
+        public DoctorsSpecialtyType Speciality { get; set; }
     }
 }
