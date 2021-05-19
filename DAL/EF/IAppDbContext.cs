@@ -7,8 +7,6 @@ namespace DAL.EF
 {
     public interface IAppDbContext
     {
-        DbSet<Doctor> Doctors { get; set; }
-
         void Dispose();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }

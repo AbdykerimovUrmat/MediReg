@@ -21,7 +21,7 @@ namespace API.Extensions
         {
             services.AddScoped<IAppDbContext, AppDbContext>();
             services.AddScoped<AuthService>();
-            services.AddScoped<DoctorService>();
+            services.AddScoped<UserService>();
         }
 
         public static void RegisterJwtAuthorization(this IServiceCollection services, IConfiguration configuration)
