@@ -16,6 +16,8 @@ namespace DAL.Entities
 
         public GenderType Gender { get; set; }
 
-        public virtual ICollection<UserRole> Roles { get; set; }
+        public virtual IEnumerable<UserRole> Roles { get; set; }
+
+        public virtual IEnumerable<Vacancy> Vacancies { get; set; }
     }
 }

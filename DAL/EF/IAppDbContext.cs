@@ -9,5 +9,9 @@ namespace DAL.EF
     {
         void Dispose();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+
+        #region DbSets
+        public DbSet<Vacancy> Vacancies { get; set; }
+        #endregion
     }
 }

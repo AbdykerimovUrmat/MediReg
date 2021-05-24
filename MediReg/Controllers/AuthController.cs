@@ -11,6 +11,7 @@ namespace API.Controllers
     public class AuthController : BaseController
     {
         private AuthService AuthService { get; }
+
         public AuthController(AuthService authService) 
         {
             AuthService = authService;

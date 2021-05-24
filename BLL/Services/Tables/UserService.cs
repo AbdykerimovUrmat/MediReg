@@ -1,6 +1,7 @@
 ﻿using Common.Enums;
 using DAL.EF;
 using DAL.Entities;
+using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Models.Tables;
 using System;
@@ -13,31 +14,19 @@ namespace BLL.Services.Tables
     {
         private UserManager<User> Users { get; }
 
-        private IAppDbContext Context { get; }
-
-        public UserService(UserManager<User> users, IAppDbContext context)
+        public UserService(UserManager<User> users)
         {
             Users = users;
-            Context = context;
         }
 
-        public async Task<string> RegisterAsync(UserModel model)
+        public async Task<string> RegisterAsync(UserModel.Add model)
         {
-            var foundUser = await Users.FindByNameAsync(model.UserName);
-            if (foundUser != null)
+            if ((await Users.FindByNameAsync(model.UserName)) != null)
             {
                 throw new Exception("Already exists");
             }
 
-            var result = await Users.CreateAsync(new User
-            {
-                UserName = model.UserName,
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                PhoneNumber = model.PhoneNumber,
-                Gender = model.Gender,
-                BirthDate = model.BirthDate
-            }, model.Password);
+            var result = await Users.CreateAsync(model.Adapt<User>(), model.Password);
 
             if(!result.Succeeded)
             {
@@ -50,10 +39,23 @@ namespace BLL.Services.Tables
 
             if(!roleAddResult.Succeeded)
             {
-                throw new Exception("Уккщк");
+                throw new Exception("Error adding roles to user");
             }
 
             return user.Id;
+        }
+
+        public async Task Edit<T>(string id, T model)
+        {
+            var user = await Users.FindByIdAsync(id);
+            user = model.Adapt(user);
+            await Users.UpdateAsync(user);
+        }
+
+        public async Task<T> GetById<T>(string id)
+        {
+            var user = await Users.FindByIdAsync(id);
+            return user.Adapt<T>();
         }
     }
 }
