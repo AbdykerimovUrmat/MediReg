@@ -10,6 +10,10 @@ namespace DAL.EF
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Vacancy> Vacancies { get; set; }
+        #region
+        public DbSet<Card> Cards { get; set; }
+
+        public DbSet<Topic> Topics { get; set; }
+        #endregion
     }
 }

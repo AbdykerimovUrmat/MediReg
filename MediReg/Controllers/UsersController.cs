@@ -1,16 +1,17 @@
 ﻿using BLL.Services.Tables;
 using Microsoft.AspNetCore.Mvc;
 using Models.Tables;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace API.Controllers
 {
-    [Route("api/User")]
-    public class UserController : BaseController
+    [Route("api/Users")]
+    public class UsersController : BaseController
     {
         private UserService Service { get; }
 
-        public UserController(UserService userService) 
+        public UsersController(UserService userService) 
         {
             Service = userService;
         }
@@ -49,6 +50,13 @@ namespace API.Controllers
         public async Task EditUser(string id, UserModel.Edit model)
         {
             await Service.Edit(id, model);
+        }
+
+        [HttpGet]
+        [Route("List")]
+        public async Task<IEnumerable<UserModel.Get>> ListAsync()
+        {
+            return await Service.List<UserModel.Get>();
         }
     }
 }

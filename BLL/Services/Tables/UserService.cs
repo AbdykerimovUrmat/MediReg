@@ -3,9 +3,11 @@ using DAL.EF;
 using DAL.Entities;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Models.Tables;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BLL.Services.Tables
@@ -56,6 +58,16 @@ namespace BLL.Services.Tables
         {
             var user = await Users.FindByIdAsync(id);
             return user.Adapt<T>();
+        }
+
+        public async Task<IEnumerable<T>> List<T> ()
+        {
+            var lst = await Users.Users
+                .AsNoTracking()
+                .ProjectToType<T>()
+                .ToListAsync();
+
+            return lst;
         }
     }
 }

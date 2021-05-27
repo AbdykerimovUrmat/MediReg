@@ -1,4 +1,5 @@
 ﻿using Common.Enums;
+using Common.Interfaces;
 using System;
 
 namespace Models.Tables
@@ -21,6 +22,11 @@ namespace Models.Tables
             /// Фамилия
             /// </summary>
             public string LastName { get; set; }
+
+            /// <summary>
+            /// Обо мне
+            /// </summary>
+            public string AboutMe { get; set; }
 
             /// <summary>
             /// Дата рождения
@@ -48,6 +54,12 @@ namespace Models.Tables
 
         public class Edit : Base { }
 
-        public class Get : Base { }
+        public class Get : Base, IIdHas<string>
+        {
+            /// <summary>
+            /// Код
+            /// </summary>
+            public string Id { get; set; }
+        }
     }
 }

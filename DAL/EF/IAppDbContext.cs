@@ -11,7 +11,9 @@ namespace DAL.EF
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 
         #region DbSets
-        public DbSet<Vacancy> Vacancies { get; set; }
+        public DbSet<Card> Cards { get; set; }
+
+        public DbSet<Topic> Topics { get; set; }
         #endregion
     }
 }
