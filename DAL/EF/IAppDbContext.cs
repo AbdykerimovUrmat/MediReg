@@ -7,9 +7,13 @@ namespace DAL.EF
 {
     public interface IAppDbContext
     {
-        DbSet<Doctor> Doctors { get; set; }
-
         void Dispose();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+
+        #region DbSets
+        public DbSet<Card> Cards { get; set; }
+
+        public DbSet<Topic> Topics { get; set; }
+        #endregion
     }
 }

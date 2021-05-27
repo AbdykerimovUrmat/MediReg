@@ -21,7 +21,9 @@ namespace API.Extensions
         {
             services.AddScoped<IAppDbContext, AppDbContext>();
             services.AddScoped<AuthService>();
-            services.AddScoped<DoctorService>();
+            services.AddScoped<UserService>();
+            services.AddScoped<CardService>();
+            services.AddScoped<TopicService>();
         }
 
         public static void RegisterJwtAuthorization(this IServiceCollection services, IConfiguration configuration)
@@ -73,7 +75,7 @@ namespace API.Extensions
                                 Id = "Bearer"
                             }
                         },
-                        new string[] { }
+                        Array.Empty<string>()
                     }
                 });
 

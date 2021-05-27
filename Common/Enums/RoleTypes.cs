@@ -11,21 +11,9 @@ namespace Common.Enums
         Admin = 1,
 
         /// <summary>
-        /// Doctor
+        /// User
         /// </summary>
-        [Description("Doctor")]
-        Doctor = 2,
-
-        /// <summary>
-        /// PatientManager
-        /// </summary>
-        [Description("PatientManager")]
-        PatientManager = 3,
-
-        /// <summary>
-        /// Patient
-        /// </summary>
-        [Description("Patient")]
-        Patient = 4,
+        [Description("User")]
+        User = 2
     }
 }

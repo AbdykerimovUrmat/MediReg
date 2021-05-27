@@ -60,6 +60,7 @@ namespace API.Services
         {
             var roles = await UserManager.GetRolesAsync(user);
             var claims = new List<Claim>
+
             {
                 new Claim(ClaimsIdentity.DefaultNameClaimType, user.UserName),
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
