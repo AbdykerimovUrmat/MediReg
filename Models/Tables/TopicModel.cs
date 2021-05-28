@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Models.Tables
 {
@@ -13,7 +12,7 @@ namespace Models.Tables
             public string Name { get; set; }
         }
 
-        public class Get
+        public class Get : Base
         {
             /// <summary>
             /// Код

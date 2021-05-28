@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Exceptions;
 using Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ namespace Common.Extensions
             where TKey : IEquatable<TKey>
         {
             return await entities.FirstOrDefaultAsync(x => id.Equals(x.Id))
-                ?? throw new Exception($"1. Нет элемента с таким Id.");
+                ?? throw new InnerException($"10003. No such element with that Id.");
         }
     }
 }

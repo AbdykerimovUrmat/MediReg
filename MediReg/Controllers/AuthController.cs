@@ -24,6 +24,7 @@ namespace API.Controllers
         [HttpPost]
         [Route("Access")]
         [ProducesResponseType(typeof(AuthModel.Response), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(Exception), StatusCodes.Status500InternalServerError)]
         public async Task<AuthModel.Response> Auth(AuthModel.Login model)
         {

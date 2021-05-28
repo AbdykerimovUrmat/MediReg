@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using API.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace API.Extensions
@@ -22,6 +23,11 @@ namespace API.Extensions
                 x.EnableFilter();
                 x.ShowExtensions();
             });
+        }
+
+        public static void UseExceptionHandling(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
         }
     }
 }

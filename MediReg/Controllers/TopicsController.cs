@@ -1,8 +1,8 @@
-﻿
+﻿using System.Threading.Tasks;
 using BLL.Services.Tables;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models.Tables;
-using System.Threading.Tasks;
 
 namespace API.Controllers
 {
@@ -23,6 +23,8 @@ namespace API.Controllers
         /// <returns>Topic model</returns>
         [HttpGet]
         [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<TopicModel.Get> Get(int id)
         {
             return await Service.ById<TopicModel.Get>(id);
@@ -35,6 +37,8 @@ namespace API.Controllers
         /// <returns>Topic Id</returns>
         [HttpPost]
         [Route("")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<int> Add(TopicModel.Add model)
         {
             return await Service.Add(model);

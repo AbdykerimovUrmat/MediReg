@@ -1,12 +1,10 @@
-﻿using BLL.Services.Base;
+﻿using System.Threading.Tasks;
+using BLL.Services.Base;
 using Common.Extensions;
 using DAL.EF;
 using DAL.Entities;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
-using Models.Tables;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace BLL.Services.Tables
 {
@@ -18,7 +16,7 @@ namespace BLL.Services.Tables
         {
             var entity = await Context.Cards
                 .Include(x => x.User)
-                .FirstOrDefaultAsync();
+                .ById(id);
             var model = entity.Adapt<T>();
             return model;
         }
