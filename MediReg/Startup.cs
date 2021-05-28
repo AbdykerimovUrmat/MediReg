@@ -1,9 +1,9 @@
+using API.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using API.Extensions;
 
 namespace API
 {
@@ -37,6 +37,7 @@ namespace API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseExceptionHandling();
 
             app.UseHttpsRedirection();
             app.UseRouting();

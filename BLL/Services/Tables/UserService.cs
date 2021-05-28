@@ -1,5 +1,5 @@
 ﻿using Common.Enums;
-using DAL.EF;
+using Common.Exceptions;
 using DAL.Entities;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
@@ -25,14 +25,14 @@ namespace BLL.Services.Tables
         {
             if ((await Users.FindByNameAsync(model.UserName)) != null)
             {
-                throw new Exception("Already exists");
+                throw new InnerException("10000.Already exists");
             }
 
             var result = await Users.CreateAsync(model.Adapt<User>(), model.Password);
 
             if(!result.Succeeded)
             {
-                throw new Exception("Invalid login or password");
+                throw new InnerException("10001.Invalid login or password");
             }
 
             var user = await Users.FindByNameAsync(model.UserName);
@@ -41,7 +41,7 @@ namespace BLL.Services.Tables
 
             if(!roleAddResult.Succeeded)
             {
-                throw new Exception("Error adding roles to user");
+                throw new InnerException("10002.Error adding roles to user");
             }
 
             return user.Id;
