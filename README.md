@@ -4,7 +4,7 @@
 
 
 ## About
-This is an application for tutors, coaches, teachers, and trainers which allows them to add their resumes so anyone who needs help can find them easily. The project consists of Web API (built on Asp.Net Core, EF Core, SQL Server 2019) and Web application part.
+This is an application for tutors, coaches, teachers, and trainers which allows them to post their resumes online so anyone who needs help can find them easily. The project consists of Web API (built on Asp.Net Core, EF Core, SQL Server 2019) and Web application part.
 
 
 
