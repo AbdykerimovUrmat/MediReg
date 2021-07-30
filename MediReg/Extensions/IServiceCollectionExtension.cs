@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using API.Services;
 using BLL.Services.Tables;
@@ -9,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Models;
@@ -51,6 +54,8 @@ namespace API.Extensions
 
         public static void RegisterSwagger(this IServiceCollection services)
         {
+            var xmlFileName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml";
+            var xmlFilePath = Path.Combine(AppContext.BaseDirectory, xmlFileName);
             services.AddSwaggerGen(x =>
             {
                 x.SwaggerDoc("v1", new OpenApiInfo { Version = "v1", Title = "MediReg Api" });
@@ -80,6 +85,8 @@ namespace API.Extensions
                 });
 
                 x.CustomSchemaIds(t => t.FullName);
+
+                x.IncludeXmlComments(xmlFilePath, true);
             });
         }
 

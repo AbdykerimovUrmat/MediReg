@@ -37,7 +37,7 @@ namespace API.Middleware
                     DevCode = ex.Message.InnerExceptionCode(),
                     Errors = new Dictionary<string, IEnumerable<string>>
                     {
-                        { "Alert", new string[]{ ex.Message.CutInnerExceptionCode() } }
+                        { ex.PropertyName ?? "Alert", new string[]{ ex.Message.CutInnerExceptionCode() } }
                     }
                 };
 

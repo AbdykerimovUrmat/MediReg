@@ -21,7 +21,7 @@ namespace BLL.Services.Tables
             Users = users;
         }
 
-        public async Task<string> RegisterAsync(UserModel.Add model)
+        public async Task<string> RegisterAsync(UserModel.AddIn model)
         {
             if ((await Users.FindByNameAsync(model.UserName)) != null)
             {

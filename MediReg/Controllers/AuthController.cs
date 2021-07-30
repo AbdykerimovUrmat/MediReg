@@ -20,13 +20,15 @@ namespace API.Controllers
         /// <summary>
         /// Получение токенов по логину и паролю
         /// </summary>
-        /// <param name="model">Логин и пароль</param>
+        /// <param name="model"> Логин и пароль </param>
+        /// <response code="400"> Model data error </response>
+        /// <response code="500"> Uncaught, unknown error </response>
         [HttpPost]
-        [Route("Access")]
+        [Route("Login")]
         [ProducesResponseType(typeof(AuthModel.Response), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(Exception), StatusCodes.Status500InternalServerError)]
-        public async Task<AuthModel.Response> Auth(AuthModel.Login model)
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status500InternalServerError)]
+        public async Task<AuthModel.Response> Login(AuthModel.Login model)
         {
             return await AuthService.AccessToken(model);
         }
