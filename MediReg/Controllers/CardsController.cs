@@ -34,8 +34,7 @@ namespace API.Controllers
         /// <summary>
         /// Add Card
         /// </summary>
-        /// <param name="model">card model</param>
-        /// <returns>Card Id</returns>
+        /// <param name="model"> card model </param>
         /// <response code="400"> Model data error </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [HttpPost]
@@ -51,8 +50,7 @@ namespace API.Controllers
         /// <summary>
         /// Get By Id
         /// </summary>
-        /// <param name="id">Id</param>
-        /// <returns>Card Model</returns>
+        /// <param name="id"> Id </param>
         /// <response code="400"> Not found </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [ProducesResponseType(typeof(CardModel.ByIdOut), StatusCodes.Status200OK)]
@@ -68,7 +66,7 @@ namespace API.Controllers
         /// <summary>
         /// Edit card
         /// </summary>
-        /// <param name="model">Card model</param>
+        /// <param name="model"> Card model </param>
         /// <response code="400"> Model data error </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [ProducesResponseType(StatusCodes.Status200OK)]

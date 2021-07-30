@@ -20,7 +20,7 @@ namespace API.Controllers
         /// <summary>
         /// Получение токенов по логину и паролю
         /// </summary>
-        /// <param name="model">Логин и пароль</param>
+        /// <param name="model"> Логин и пароль </param>
         /// <response code="400"> Model data error </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [HttpPost]

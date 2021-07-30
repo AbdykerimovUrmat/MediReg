@@ -20,8 +20,8 @@ namespace API.Controllers
         /// <summary>
         /// Get topic by Id
         /// </summary>
-        /// <param name="id">Topic Id</param>
-        /// <returns>Topic model</returns>
+        /// <param name="id"> Topic Id </param>
+        /// <returns> Topic model </returns>
         /// <response code="400"> Not found </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [HttpGet]
@@ -37,8 +37,8 @@ namespace API.Controllers
         /// <summary>
         /// Create new topic with no cards
         /// </summary>
-        /// <param name="model">Topic model</param>
-        /// <returns>Topic Id</returns>
+        /// <param name="model"> Topic model </param>
+        /// <returns> Topic Id </returns>
         /// <response code="400"> Model data error </response>
         /// <response code="500"> Uncaught, unknown error </response>
         [HttpPost]
