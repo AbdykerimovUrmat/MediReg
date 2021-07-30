@@ -18,6 +18,14 @@ namespace API.Controllers
             Service = service;
         }
 
+        /// <summary>
+        /// List of all Cards
+        /// </summary>
+        /// <response code="500"> Uncaught, unknown error </response>
+        [HttpGet]
+        [Route("List")]
+        [ProducesResponseType(typeof(IEnumerable<CardModel.ListOut>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status500InternalServerError)]
         public async Task<IEnumerable<CardModel.ListOut>> List()
         {
             return await Service.ListAsync<CardModel.ListOut>();
