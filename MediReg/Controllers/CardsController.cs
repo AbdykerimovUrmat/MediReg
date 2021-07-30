@@ -1,6 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using BLL.Services.Tables;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 using Models.Tables;
 
 namespace API.Controllers
@@ -15,16 +18,26 @@ namespace API.Controllers
             Service = service;
         }
 
+        public async Task<IEnumerable<CardModel.ListOut>> List()
+        {
+            return await Service.ListAsync<CardModel.ListOut>();
+        }
+
         /// <summary>
         /// Add Card
         /// </summary>
         /// <param name="model">card model</param>
         /// <returns>Card Id</returns>
+        /// <response code="400"> Model data error </response>
+        /// <response code="500"> Uncaught, unknown error </response>
         [HttpPost]
         [Route("")]
-        public async Task<int> Add(CardModel.Add model)
+        [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status500InternalServerError)]
+        public async Task<int> Add(CardModel.AddIn model)
         {
-            return await Service.Add(model);
+            return await Service.AddAsync(model);
         }
 
         /// <summary>
@@ -32,23 +45,32 @@ namespace API.Controllers
         /// </summary>
         /// <param name="id">Id</param>
         /// <returns>Card Model</returns>
+        /// <response code="400"> Not found </response>
+        /// <response code="500"> Uncaught, unknown error </response>
+        [ProducesResponseType(typeof(CardModel.ByIdOut), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status500InternalServerError)]
         [HttpGet]
         [Route("{id}")]
-        public async Task<CardModel.Get> Get(int id)
+        public async Task<CardModel.ByIdOut> ById(int id)
         {
-            return await Service.ById<CardModel.Get>(id);
+            return await Service.ByIdAsync<CardModel.ByIdOut>(id);
         }
 
         /// <summary>
         /// Edit card
         /// </summary>
         /// <param name="model">Card model</param>
-        /// <returns></returns>
+        /// <response code="400"> Model data error </response>
+        /// <response code="500"> Uncaught, unknown error </response>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(BadRequestModel), StatusCodes.Status500InternalServerError)]
         [HttpPut]
         [Route("")]
-        public async Task Edit(CardModel.Edit model)
+        public async Task Edit(CardModel.EditIn model)
         {
-            await Service.Edit(model);
+            await Service.EditAsync(model);
         }
     }
 }

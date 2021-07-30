@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:API.Controllers.AuthController.Auth(Models.AuthModel.Login)">
+            <summary>
+            Получение токенов по логину и паролю
+            </summary>
+            <param name="model">Логин и пароль</param>
+        </member>
+        <member name="M:API.Controllers.CardsController.Add(Models.Tables.CardModel.Add)">
+            <summary>
+            Add Card
+            </summary>
+            <param name="model">card model</param>
+            <returns>Card Id</returns>
+        </member>
+        <member name="M:API.Controllers.CardsController.Get(System.Int32)">
+            <summary>
+            Get By Id
+            </summary>
+            <param name="id">Id</param>
+            <returns>Card Model</returns>
+        </member>
+        <member name="M:API.Controllers.CardsController.Edit(Models.Tables.CardModel.Edit)">
+            <summary>
+            Edit card
+            </summary>
+            <param name="model">Card model</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.TopicsController.Get(System.Int32)">
+            <summary>
+            Get topic by Id
+            </summary>
+            <param name="id">Topic Id</param>
+            <returns>Topic model</returns>
+        </member>
+        <member name="M:API.Controllers.TopicsController.Add(Models.Tables.TopicModel.Add)">
+            <summary>
+            Create new topic with no cards
+            </summary>
+            <param name="model">Topic model</param>
+            <returns>Topic Id</returns>
+        </member>
+        <member name="M:API.Controllers.UsersController.Register(Models.Tables.UserModel.Add)">
+            <summary>
+            Registers new user
+            </summary>
+            <param name="model">New user model</param>
+            <returns>string Id of registered account</returns>
+        </member>
+        <member name="M:API.Controllers.UsersController.GetById(System.String)">
+            <summary>
+            Get user by Id
+            </summary>
+            <param name="id">Id of user</param>
+            <returns>user model</returns>
+        </member>
+        <member name="M:API.Controllers.UsersController.EditUser(System.String,Models.Tables.UserModel.Edit)">
+            <summary>
+            Edits user
+            </summary>
+            <param name="id">Id of user</param>
+            <param name="model">user model</param>
+        </member>
+    </members>
+</doc>

@@ -12,7 +12,7 @@ namespace BLL.Services.Tables
     {
         public CardService(IAppDbContext context) : base(context, context.Cards) { }
 
-        public override async Task<T> ById<T>(int id)
+        public override async Task<T> ByIdAsync<T>(int id)
         {
             var entity = await Context.Cards
                 .Include(x => x.User)
